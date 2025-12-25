@@ -47,7 +47,7 @@ FLACE.Flace {
     config = { extra = { ready = true } },
     use = function (self, card)
         G.consumeables.highlighted[1]:use_consumeable()
-        card.ability.extra.ready = true
+        card.ability.extra.ready = false
     end,
     can_use = function (self, card)
         if #G.consumeables.highlighted == 1 and G.consumeables.highlighted[1]:can_use_consumeable() and card.ability.extra.ready then
@@ -102,4 +102,5 @@ FLACE.Flace {
     end,
 
 }
+
 
